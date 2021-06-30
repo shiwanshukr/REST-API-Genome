@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Ontology Search</title>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+            <div class="card-body">
+                <h2> API Call </h2>
+                <h5> http://127.0.0.1:5000/api/GO:0000016 </h5>
+
+                <p> XXXXXXXX/api/GO:0000016 </p>
+                <p> http://127.0.0.1:5000/api/'GO:XXXX' </p>
+                <h4> pattern: </h4>
+                <p> localhost/api/GO:'int:task_id' </p>
+            </div>
+			<form action="{{ url_for('calc') }}" method="POST" class="contact100-form">
+				<span class="contact100-form-title">
+					Ontology Search
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="Please enter your name">
+					<input class="input100" type="text" name="ont_name" placeholder="ontology IDExample: GO:0000016">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button type="submit" class="contact100-form-btn"> Get Details </button>
+				</div>
+			</form>
+
+			<div class="contact100-more">
+				Contact: <span class="contact100-more-highlight">krshiwanshu@gmail.com</span>
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+</html>

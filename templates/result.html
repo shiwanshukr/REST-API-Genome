@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Details</title>
+</head>
+    <body>
+
+        <div class="card">
+          <h5 class="card-header">{{ name }}</h5>
+              <div class="card-body">
+                <h5 class="card-title">{{ description }}</h5>
+                <p class="card-text">data base cross reference: {{ dcr }}</p>
+                <tbody>
+                  {% for key in dcr %}
+                    <tr>
+                      <td>{{ key }}</td><br>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+                <br>
+                <p class="card-text"><b>synonyms:</b> {{ synonyms }}</p>
+                <br>
+                <a href="{{ url_for('hello_world')}}" class="btn btn-primary">Go Back to Home</a>
+              </div>
+        </div>
+
+    </body>
+</html>
